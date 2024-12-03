@@ -62,7 +62,7 @@ footer {
     background-color: #2D882D;
     color: #A5DA91;
     text-align: center;
-    padding: 20px 10px;
+    padding-top: 20px;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -100,7 +100,6 @@ footer .legal {
 .gallery img:hover {
     transform: scale(1.05);
 }
-
 
 /* Sección de formulario en presupuesto */
 form {
