@@ -29,7 +29,7 @@
              title="El nombre solo puede contener letras y espacios.">
             <!--Para el correo, uso pattern que permita el uso de letras, números, o signos especiales, @, y lo mismo. Incluyo el dominio.-->
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]"
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+"
              title="Ingrese un correo electrónico válido, por ejemplo: usuario@dominio.com">
             <!--Para el teléfono, 9 dígitos debería bastar para clientes nacionales.-->
             <label for="telefono">Teléfono:</label>
@@ -41,7 +41,8 @@
              title="El texto solo puede contener letras, números y espacios."></textarea>
 
             <div class="checkbox">
-                <input type="checkbox" id="privacidad" name="privacidad" required>
+                <input type="checkbox" id="privacidad" name="privacidad" required 
+                 title="Debes aceptar la Política de privacidad para poder continuar.">
                 <label for="privacidad">Acepto la <u>Política de privacidad</u></label>
             </div>
 
