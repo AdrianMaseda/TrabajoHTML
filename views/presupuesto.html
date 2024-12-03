@@ -23,17 +23,22 @@
         <h1>Solicita tu presupuesto:</h1>
         <!-- Hago control de parámetros sobre todos los campos-->
         <form>
+            <!--Para el nombre, uso pattern que permita el uso de letras y espacios-->
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
+            <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+"
+             title="El nombre solo puede contener letras y espacios.">
+            <!--Para el correo, uso pattern que permita el uso de letras, números, o signos especiales, @, y lo mismo. Incluyo el dominio.-->
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]"
+             title="Ingrese un correo electrónico válido, por ejemplo: usuario@dominio.com">
+            <!--Para el teléfono, 9 dígitos debería bastar para clientes nacionales.-->
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}">
-
+            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}"
+             title="Ingrese un número de teléfono válido, es decir, 9 dígitos.">
+            <!--Aquí simplemente añado pattern para letras, espacios, números y algún caracter especial.-->
             <label for="informacion">Información adicional sobre el proyecto:</label>
-            <textarea id="informacion" name="informacion" rows="5" required></textarea>
+            <textarea id="informacion" name="informacion" rows="5" required pattern="[A-Za-zÀ-ÿ0-9\s]+" 
+             title="El texto solo puede contener letras, números y espacios."></textarea>
 
             <div class="checkbox">
                 <input type="checkbox" id="privacidad" name="privacidad" required>
